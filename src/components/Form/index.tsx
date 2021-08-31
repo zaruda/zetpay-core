@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Formik, Field } from 'formik';
 import { object, string } from 'yup';
 import {
@@ -178,29 +177,27 @@ export default function SubscribeForm({
                 align="center"
               >
                 By continuing, you agree to the Google Payments{' '}
-                <Link
+                <MuiLink
                   href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=buyertos"
-                  passHref
+                  target="_blank"
+                  underline="always"
                 >
-                  <MuiLink target="_blank" underline="always">
-                    Terms of Service
-                  </MuiLink>
-                </Link>
+                  Terms of Service
+                </MuiLink>
                 . The{' '}
-                <Link
+                <MuiLink
                   href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice&ldl=ru"
-                  passHref
+                  target="_blank"
+                  underline="always"
                 >
-                  <MuiLink target="_blank" underline="always">
-                    Privacy Notice
-                  </MuiLink>
-                </Link>{' '}
+                  Privacy Notice
+                </MuiLink>{' '}
                 describes how your data is handled.
               </Typography>
               <Button
                 type="submit"
                 variant="contained"
-                color="secondary"
+                color="primary"
                 fullWidth
               >
                 Save

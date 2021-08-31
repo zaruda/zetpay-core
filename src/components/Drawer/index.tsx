@@ -30,7 +30,10 @@ const useStyles = makeStyles<Theme>(theme => ({
   }
 }));
 
-export default function Drawer({ children }: IDrawerProps) {
+export default function Drawer({
+  children,
+  href = '/subscribe/form'
+}: IDrawerProps) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -79,7 +82,7 @@ export default function Drawer({ children }: IDrawerProps) {
               startIcon={<CardIcon />}
               fullWidth
               variant="outlined"
-              href="/subscribe/form"
+              href={href}
             >
               Add credit or debit card
             </Button>

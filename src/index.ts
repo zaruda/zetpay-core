@@ -1,5 +1,5 @@
 import api from './api';
 import SubscribePage from './pages/subscribe';
-import services from './services';
+import Drawer from './components/Drawer';
 
-export { SubscribePage, api, services };
+export { SubscribePage, Drawer, api };
