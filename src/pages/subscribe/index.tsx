@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
+import { ThemeProvider } from '@material-ui/core';
 
 import SubscribeForm from '../../components/Form';
 import { CreateInvoiceResponse } from '../../api';
+import theme from '../../theme';
 
 export default function Subscribe() {
   const [response, setResponse] = useState<CreateInvoiceResponse>();
@@ -21,10 +23,12 @@ export default function Subscribe() {
   }, []);
 
   return (
-    <SubscribeForm
-      sessionId={response?.sessionId}
-      formToken={response?.formToken}
-      payformUrl={response?.payformUrl}
-    />
+    <ThemeProvider theme={theme}>
+      <SubscribeForm
+        sessionId={response?.sessionId}
+        formToken={response?.formToken}
+        payformUrl={response?.payformUrl}
+      />
+    </ThemeProvider>
   );
 }
